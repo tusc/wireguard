@@ -9,12 +9,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Project Notes
-**Author:** Carlos Talbot (@tusc00)
+**Author:** Carlos Talbot (@tusc69 on ubnt forums)
 
+The tar file below is a collection of binaries that can be loaded on a UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
 
-This tar file below is a collection of binaries that can be loaded on a UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
-
-Ssh into the UDM and type the following command from the /root folder:
+ssh into the UDM and type the following command from the /root folder:
 **# curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true**
 
 From this directory type the following, it will extract the files under the /mnt/data path:
