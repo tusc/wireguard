@@ -31,15 +31,15 @@ In order to start the wireguard tunnel you need to run this command from the cli
 
 you should see output similar to the following:
 
-[#] ip link add wg0 type wireguard
-RTNETLINK answers: Operation not supported
-[!] Missing WireGuard kernel module. Falling back to slow userspace implementation.
-[#] boringtun wg0 --disable-drop-privileges=1
-BoringTun started successfully
-[#] wg setconf wg0 /dev/fd/63
-[#] ip -4 address add 10.253.0.3/32 dev wg0
-[#] ip link set mtu 1420 up dev wg0
-[#] ip -4 route add 10.253.0.0/24 dev wg0
+**[#] ip link add wg0 type wireguard
+**RTNETLINK answers: Operation not supported
+**[!] Missing WireGuard kernel module. Falling back to slow userspace implementation.
+**[#] boringtun wg0 --disable-drop-privileges=1
+**BoringTun started successfully
+**[#] wg setconf wg0 /dev/fd/63
+**[#] ip -4 address add 10.253.0.3/32 dev wg0
+**[#] ip link set mtu 1420 up dev wg0
+**[#] ip -4 route add 10.253.0.0/24 dev wg0
 
 You can also execute the wg binary for status on the tunnel:
 
