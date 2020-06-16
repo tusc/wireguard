@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 This tar file below is a collection of binaries that can be loaded on a UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
 
 Ssh into the UDM and type the following command from the /root folder:
-curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true
+**# curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true**
 
 From this directory type the following, it will extract the files under the /mnt/data path:
 tar -C / -xvf udm-wireguard.tar.Z
@@ -26,7 +26,7 @@ There's a sample wg0.conf in /etc/wireguard you can use to create your own, prov
 
 In order to start the wireguard tunnel you need to run this command from the cli:
 
-WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0
+**# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0**
 
 you should see output similar to the following:
 
@@ -56,7 +56,7 @@ peer: xweCuGFu7OCVfAgPMuGqT1tJiATWOYodv/S8nKO9gHg=
   
  Conversly, in order to shutdown the tunnel, you'll need to do this:
  
- WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0
+**# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0**
 
 You'll find some other useful utils in the /mnt/data/bin path such as bash, htop, iftop and iperf3.
 
