@@ -48,7 +48,7 @@ BoringTun started successfully
 You can also execute the wg binary for status on the tunnel:
 
 ```
-# wg**
+# wg
 
 interface: wg0
   public key: ************************
