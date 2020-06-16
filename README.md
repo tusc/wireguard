@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Project Notes
 **Author:** Carlos Talbot (@tusc69 on ubnt forums)
 
-The tar file below is a collection of binaries that can be loaded on a UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
+The tar file in this repository is a collection of binaries that can be loaded onto an UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
 
 ssh into the UDM and type the following command from the /root folder:
 
