@@ -21,7 +21,7 @@ From this directory type the following, it will extract the files under the /mnt
 
 **# tar -C / -xvf udm-wireguard.tar.Z**
 
-One the extraction is complete, cd into /mnt/data and run the script setup_bin.sh. This will setup the symbolic links for the various binaries to the /bin path as well as create a symlink for the /etc/wireguard folder.
+Once the extraction is complete, cd into /mnt/data and run the script setup_bin.sh. This will setup the symbolic links for the various binaries to the /bin path as well as create a symlink for the /etc/wireguard folder.
 
 There's a sample wg0.conf in /etc/wireguard you can use to create your own, provided you update the public and private keys. There are various tutorials out there for setting up a client/server config for wireguard (e.g. https://www.stavros.io/posts/how-to-configure-wireguard/ )
 
@@ -46,16 +46,16 @@ You can also execute the wg binary for status on the tunnel:
 **# wg**
 
 interface: wg0
-  public key: lj6kN+P2m2vizK1KGnil/5SSiJGYh2hhfmWm24rMZRQ=
+  public key: ************************
   private key: (hidden)
   listening port: 43724
 
-peer: xweCuGFu7OCVfAgPMuGqT1tJiATWOYodv/S8nKO9gHg=
+peer: *********************************
   preshared key: (hidden)
   endpoint: 192.168.1.106:51820
   allowed ips: 10.253.0.0/24
   
- Conversly, in order to shutdown the tunnel, you'll need to do this:
+ Finally, in order to shutdown the tunnel you'll need to run this command:
  
 **# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0**
 
