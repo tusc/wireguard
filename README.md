@@ -32,7 +32,7 @@ There's a sample wg0.conf in /etc/wireguard you can use to create your own, prov
 In order to start the wireguard tunnel you need to run this command from the cli:
 
 ```
-# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0**
+# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0
 ```
 
 you should see output similar to the following:
