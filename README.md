@@ -27,7 +27,9 @@ There's a sample wg0.conf in /etc/wireguard you can use to create your own, prov
 
 In order to start the wireguard tunnel you need to run this command from the cli:
 
-**# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0**
+```
+# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0**
+```
 
 you should see output similar to the following:
 
@@ -45,7 +47,8 @@ BoringTun started successfully
 
 You can also execute the wg binary for status on the tunnel:
 
-**# wg**
+```
+# wg**
 
 interface: wg0
   public key: ************************
@@ -56,10 +59,12 @@ peer: *********************************
   preshared key: (hidden)
   endpoint: 192.168.1.106:51820
   allowed ips: 10.253.0.0/24
-  
+```
+
  Finally, in order to shutdown the tunnel you'll need to run this command:
  
-**# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0**
-
+```
+# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0**
+```
 You'll find some other useful utils in the /mnt/data/bin path such as bash, htop, iftop and iperf3.
 
