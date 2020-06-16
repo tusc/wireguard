@@ -1,7 +1,6 @@
 # Wireguard for UDM/UDM pro
 
 ## Distributed under MIT license
-Copyright (c) 2016 VeeamHub
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -12,11 +11,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Project Notes
 **Author:** Carlos Talbot (@tusc00)
 
-# Publish_DBCC_byvm.ps1
-DBCC check using Veeam's SQL Publish feature v1.1
-By Carlos Talbot (carlos@talbot.net)
+# Wireguard utils for UDM/UDM pro
 
-This script should run on the SQL server the databases are attached to.
-You will need to install the Veeam console on the SQL server in order to enable the Veeam PowerShell cmdlets.
+This tar file below is a collection of binaries that can be loaded on a UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
 
-The script can optionally send a summary email with the results for each DBCC check.
+You can download the binary directly on the UDM by using the command wget. For example, from a command line:
+
