@@ -26,6 +26,7 @@ From this directory type the following, it will extract the files under the /mnt
 ```
 
 Once the extraction is complete, cd into /mnt/data and run the script **setup_bin.sh**. This will setup the symbolic links for the various binaries to the /bin path as well as create a symlink for the /etc/wireguard folder.
+
 **Please Note: you will need to run setup_bin.sh whenever the UDM is rebooted as the symlinks have to be recreated.**
 
 There's a sample wg0.conf in /etc/wireguard you can use to create your own, provided you update the public and private keys. There are various tutorials out there for setting up a client/server config for wireguard (e.g. https://www.stavros.io/posts/how-to-configure-wireguard/ )
