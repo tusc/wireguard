@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 The tar file in this repository is a collection of binaries that can be loaded onto an UDM to run wireguard in userland mode. I plan to include instructions on how to compile the software shortly.
 
-ssh into the UDM and type the following command from the /root folder:
+ssh into the UDM and type the following command from the /root folder to download the tar file:
 
 **# curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true**
 
