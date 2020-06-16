@@ -15,11 +15,15 @@ The tar file in this repository is a collection of binaries that can be loaded o
 
 ssh into the UDM and type the following command from the /root folder to download the tar file:
 
-**# curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true**
+```
+# curl -LJo udm-wireguard.tar.Z  https://github.com/tusc/wireguard/blob/master/udm-wireguard.tar.Z?raw=true**
+```
 
 From this directory type the following, it will extract the files under the /mnt/data path:
 
-**# tar -C / -xvf udm-wireguard.tar.Z**
+```
+# tar -C / -xvf udm-wireguard.tar.Z**
+```
 
 Once the extraction is complete, cd into /mnt/data and run the script setup_bin.sh. This will setup the symbolic links for the various binaries to the /bin path as well as create a symlink for the /etc/wireguard folder.
 
