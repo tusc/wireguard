@@ -42,7 +42,8 @@ BoringTun started successfully
 
 You can also execute the wg binary for status on the tunnel:
 
-wg
+**# wg**
+
 interface: wg0
   public key: lj6kN+P2m2vizK1KGnil/5SSiJGYh2hhfmWm24rMZRQ=
   private key: (hidden)
