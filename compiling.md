@@ -54,11 +54,10 @@ At this point you can copy the static binaries over to your UDM/UDM pro with scp
 
 You can compile additional tools if you wish. Just run “make menuconfig” and go into the “Target packages” from the top menu.
 
-**note: these binaries are built with the musl library in a static build so some packages won’t be available to compile**
-
 ```
 # make menuconfig
 ```
+**note: these binaries are built with the musl library in a static build so some packages won’t be available to compile**
 
 Since we cannot use the kernel module for wireguard we will have to compile a userland equivalent. There are two available, wireguard-go and boringtun. I went with the latter since it is suppose to be faster (go vs rust).
 In order to cross compile the boringtun binary you will need a couple of tools:
