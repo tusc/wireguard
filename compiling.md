@@ -22,7 +22,7 @@ Go ahead and download and extract the most recent version of buildroot (at this 
 Once you change into that directory go ahead and download the .config and kernel.config file from the gitbhub page into this directory.
 
 ```
-# curl -LJo .config  https://github.com/tusc/wireguard/blob/master/buildroot-config?raw=true
+# curl -LJo .config  https://github.com/tusc/wireguard/blob/master/buildroot.config?raw=true
 # curl -LJo kernel.config  https://github.com/tusc/wireguard/blob/master/buildroot-kernel.config?raw=true
 ```
 
