@@ -6,7 +6,7 @@
 
 In order to cross compile the userland tools for wireguard and the various utilities such as htop, iftop, iperf3, you will need to download and install buildroot. For this example we are using an Unbuntu 20.04 server.
 
-You need about ~ 5GB of disk space for buildroot after everything is copmiled. You also need install addtional packages for preping the compiler environment. The command below will install the essentials:
+You need about ~ 5GB of disk space for buildroot after everything is compiled. You also need to install addtional packages for preping the compiler environment. The command below will install the essentials:
 
 ```
 # sudo apt-get install build-essential ncurses-base ncurses-bin libncurses5-dev dialog unzip bc python curl
