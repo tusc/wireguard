@@ -33,7 +33,7 @@ make
 ```
 
 At this point you might want to step away and grab a cup of coffee or tea as this will take a while.
-The binaries will be located in these folder:
+The binaries will be located in the following folders:
 ./output/target/bin<br/>
 ./output/target/sbin<br/>
 ./output/target/usr/bin<br/>
