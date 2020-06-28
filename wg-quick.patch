@@ -1,0 +1,29 @@
+--- buildroot-2020.05/output/target/usr/bin/wg-quick    2020-06-27 16:27:51.364124577 -0500
++++ dl/mnt/data/bin/wg-quick    2020-06-14 14:18:40.000000000 -0500
+@@ -88,7 +88,7 @@
+                ret=$?
+                [[ -e /sys/module/wireguard ]] || ! command -v "${WG_QUICK_USERSPACE_IMPLEMENTATION:-wireguard-go}" >/dev/null && exit $ret
+                echo "[!] Missing WireGuard kernel module. Falling back to slow userspace implementation."
+-               cmd "${WG_QUICK_USERSPACE_IMPLEMENTATION:-wireguard-go}" "$INTERFACE"
++               cmd "${WG_QUICK_USERSPACE_IMPLEMENTATION:-wireguard-go}" $INTERFACE --disable-drop-privileges=1
+        fi
+ }
+
+@@ -329,7 +329,7 @@
+                add_addr "$i"
+        done
+        set_mtu_up
+-       set_dns
++#      set_dns
+        for i in $(while read -r _ i; do for i in $i; do [[ $i =~ ^[0-9a-z:.]+/[0-9]+$ ]] && echo "$i"; done; done < <(wg show "$INTERFACE" allowed-ips) | sort -nr -k 2 -t /); do
+                add_route "$i"
+        done
+@@ -342,7 +342,7 @@
+        execute_hooks "${PRE_DOWN[@]}"
+        [[ $SAVE_CONFIG -eq 0 ]] || save_config
+        del_if
+-       unset_dns || true
++#      unset_dns || true
+        remove_firewall || true
+        execute_hooks "${POST_DOWN[@]}"
+ }
