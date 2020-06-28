@@ -77,7 +77,7 @@ $ curl https://sh.rustup.rs -sSf | sh
 ```
 Accept the defaults, it will update you .profile with paths to the rust compiler under the path $HOME/.cargo/bin. You'll have to log out and log back in in order to have the $PATH environment variable updated.
 
-Install cargo
+Install cross
 ```
 $ cargo install cross
 ```
