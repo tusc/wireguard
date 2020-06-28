@@ -118,6 +118,12 @@ $
 
 Go ahead and copy the binary to your UDM/UDM pro. At this point you'll want to refer back to the main [README](https://github.com/tusc/wireguard/blob/master/README.md) on how to configure wg0.conf and use the modified wg-quick script as included in the tar file. I've included the patched wg-quick [here](https://github.com/tusc/wireguard/blob/master/wg-quick) as well as the diff file [here](https://github.com/tusc/wireguard/blob/master/wg-quick.patch)
 
+The tar file includes a script to setup the paths for the binares as well as creating a file descriptor directory on the UDM as required by the wg-quick script. You'll have to manually create this if you chose not to run the setup script:
+```
+# ln -s /proc/self/fd /dev/fd &>/dev/null
+```
+
+
 
 
 
