@@ -70,6 +70,8 @@ cross (cross compiling of rust crates)<br/>
 docker (used to create the cross compile environment)<br/>
 boringtun sources
 
+These tools require about ~ 2 GB of space after compilation.
+
 In order to install rustup and cargo you run the installer from your Unbutu server linux prompt:
 
 ```
