@@ -84,7 +84,7 @@ $ cargo install cross
 
 Install docker for the cross compile rust environment
 ```
-$  sudo apt-get install docker.io
+$ sudo apt-get install docker.io
 ```
 Make sure your account is part of the docker group in order to start/stop conatiners. You'll need to log out and back in for the group add to take effect. Finally, start up docker
 
