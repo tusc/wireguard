@@ -115,15 +115,41 @@ $ ls -l ./target/aarch64-unknown-linux-gnu/release/boringtun
 -rwxr-xr-x 2 ctalbot ctalbot 5026952 Jun 28 12:12 ./target/aarch64-unknown-linux-musl/release/boringtun
 $
 ```
+Go ahead and copy the following binaries to your UDM/UDM pro and place them in a directory that'll persist after reboots (e.g. /mnt/data/bin)
 
-Go ahead and copy the binary to your UDM/UDM pro. At this point you'll want to refer back to the main [README](https://github.com/tusc/wireguard/blob/master/README.md) on how to configure wg0.conf and use the modified wg-quick script as included in the tar file. I've included the patched wg-quick [here](https://github.com/tusc/wireguard/blob/master/wg-quick) as well as the diff file [here](https://github.com/tusc/wireguard/blob/master/wg-quick.patch)
+wg<br/>
+wg-quick<br/>
+boringtun<br/>
 
-The tar file includes a script to setup the paths for the binares as well as creating a file descriptor directory on the UDM as required by the wg-quick script. You'll have to manually create this if you chose not to run the setup script:
+You'll want to grab the patched wg-quick file from [here](https://github.com/tusc/wireguard/blob/master/wg-quick). The patch includes an extra parameter to the boringtun cmd to disable drop permissions as well as commenting out dns updates since the UbioOS does not include resolvconf.
+
+You'll also need to create a symlink for /dev/fd. This is need as this is referenced ni the wg-quick script.
 ```
 # ln -s /proc/self/fd /dev/fd &>/dev/null
 ```
+The last step is to create the  /etc/wireguard folder and file called wg0.conf. You can follow the [README](https://github.com/tusc/wireguard/blob/master/README.md) file for the rest of the wireguard configuration.
 
+All of the steps above are done for you if you download the tar file and run the setup_bin.sh so you might want to review it for reference.
 
+At this point you are ready to bring up the tunnel. This is done with the following command:
+```
+# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick up wg0
+```
+You can also execute the wg binary for status on the tunnel:
+```
+# wg
 
+interface: wg0
+  public key: ************************
+  private key: (hidden)
+  listening port: 43724
 
-
+peer: *********************************
+  preshared key: (hidden)
+  endpoint: 192.168.1.106:51820
+  allowed ips: 10.253.0.0/24
+Finally, in order to shutdown the tunnel you'll need to run this command:
+```
+```
+# WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0
+```
