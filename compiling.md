@@ -46,10 +46,10 @@ $ ls -l output/target/usr/bin/htop
 $
 ```
 
-At this point you can copy the static binaries over to your UDM/UDM pro with scp and ensure they are executable with this command:
+At this point you can copy the static binaries over to your UDM/UDM pro with scp and ensure they are executable with this command (run from UDM):
 
 ```
-$ chmod +x htop
+# chmod +x htop
 ```
 
 You can compile additional tools if you wish. Just run “make menuconfig” and go into the “Target packages” from the top menu.
