@@ -117,13 +117,13 @@ $
 ```
 Go ahead and copy the following binaries to your UDM/UDM pro and place them in a directory that'll persist after reboots (e.g. /mnt/data/bin)
 
-wg<br/>
-wg-quick<br/>
-boringtun<br/>
+wg (found in buildroot-2020.05/output/target/usr/bin) <br/>
+wg-quick (use this [patched](https://github.com/tusc/wireguard/blob/master/wg-quick) version)<br/>
+boringtun (found in boringtun/target/aarch64-unknown-linux-musl/release/<br/>
 
-You'll want to grab the patched wg-quick file from [here](https://github.com/tusc/wireguard/blob/master/wg-quick). The patch includes an extra parameter to the boringtun cmd to disable drop permissions as well as commenting out dns updates since the UbioOS does not include resolvconf.
+The patched wg-quick includes an extra parameter to the boringtun cmd to disable drop permissions as well as commenting out dns updates since UbioOS does not include resolvconf.
 
-You'll also need to create a symlink for /dev/fd. This is need as this is referenced ni the wg-quick script.
+You'll also need to create a symlink for /dev/fd. This is needed as this is used in the wg-quick script.
 ```
 # ln -s /proc/self/fd /dev/fd &>/dev/null
 ```
@@ -148,8 +148,8 @@ peer: *********************************
   preshared key: (hidden)
   endpoint: 192.168.1.106:51820
   allowed ips: 10.253.0.0/24
-Finally, in order to shutdown the tunnel you'll need to run this command:
 ```
+Finally, in order to shutdown the tunnel you'll need to run this command:
 ```
 # WG_QUICK_USERSPACE_IMPLEMENTATION=boringtun wg-quick down wg0
 ```
