@@ -11,6 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Project Notes
 **Author:** Carlos Talbot (@tusc69 on ubnt forums)
 
+## UPDATE: Please note this version will no longer be updated as the kernel version is now availble which is much more efficient and offers higher throughput: https://github.com/tusc/wireguard-kmod
 The tar file in this repository is a collection of binaries that can be loaded onto an UDM to run wireguard in userland mode. If you want to compile your own version you can follow this [guide](https://github.com/tusc/wireguard/blob/master/compiling.md)
 
 ssh into the UDM and type the following command from the /root folder to download the tar file:
